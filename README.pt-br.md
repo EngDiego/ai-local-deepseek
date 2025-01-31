@@ -124,7 +124,7 @@ sudo docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
 3.  **Configuração de Admin → Modelos**:
     - Extraia o modelo Ollama.com.
     - Insira `deepseek-r1:7b` e faça o download.
-4.  **Carregar o Modelo Era**:
+4.  **Carregar o Modelo Mika**:
     - Vá para [Modelo Companheira Mika](https://openwebui.com/m/digo/mika/) e adicione-o ao Open-WebUI.
 
 ### 7. Pronto para Usar!
