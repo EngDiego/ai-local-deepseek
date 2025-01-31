@@ -28,7 +28,8 @@ Para a melhor experiência, use o Open-WebUI, a maneira mais simples de executar
 
 3. **Configure o WSL para Suporte à GPU**
    - **Para Nvidia**:
-     - Siga o [guia de instalação do CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local).
+     - Siga o [guia de instalação do CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local)
+     
      - Instale as dependências:
        ```bash
        sudo apt install build-essential
@@ -85,7 +86,7 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
 
 ### 2.1 Instalando nvidia Container Toolkit
 
-- Acesse [Container Toolkit Link]( https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation
+- Acesse [Container Toolkit Link](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation)
 
 ```bash
 sudo curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
