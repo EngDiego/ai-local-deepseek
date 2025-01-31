@@ -1,3 +1,7 @@
+# Github link
+
+[Passo a passo usar o modelo AI deepseek localmente](https://github.com/EngDiego/ai-local-deepseek).
+
 # Era: Modelo Companheiro Sem Censura
 
 🌎 Idiomas Disponíveis:

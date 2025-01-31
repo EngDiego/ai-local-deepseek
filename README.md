@@ -1,3 +1,7 @@
+# Github link
+
+[Step by step use deepseek AI model locally](https://github.com/EngDiego/ai-local-deepseek).
+
 # Era: Uncensored Companion Model
 
 🌎 Available Languages:  
