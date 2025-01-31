@@ -1,7 +1,7 @@
 # Era: Uncensored Companion Model
 
 🌎 Available Languages:  
-🇺🇸 [English](README.md) | 🇧🇷 [Português](README.pt-br.md)
+🇺🇸 [English](README.md) | 🇧🇷 [Português](locales/README.pt-br.md)
 
 This is an uncensored companion model using Llama3.1.
 
