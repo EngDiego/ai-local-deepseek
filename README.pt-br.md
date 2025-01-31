@@ -61,7 +61,7 @@ Para a melhor experiência, use o Open-WebUI, a maneira mais simples de executar
 - **Windows**: Siga [este guia](https://docs.docker.com/desktop/setup/install/windows-install/).
 
 - **Para WSL (baseado em Ubuntu)**:
-  ``bash
+  `bash
   sudo apt-get update
   sudo apt-get install ca-certificates curl
   sudo install -m 0755 -d /etc/apt/keyrings
@@ -74,7 +74,7 @@ Para a melhor experiência, use o Open-WebUI, a maneira mais simples de executar
   sudo apt-get update
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   sudo docker run hello-world
-``
+  `
 
 ### 2. (Opcional) Instalar o Portainer para Gerenciamento do Docker
 ````bash
