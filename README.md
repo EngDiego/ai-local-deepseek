@@ -100,30 +100,8 @@ sudo docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
    - Extract Ollama.com model.
    - Insert `deepseek-r1:7b` and download it.
 4. **Load Era Model**:
-   - Go to [Era Companion Model](https://openwebui.com/m/digo/era-companion/) and add it to Open-WebUI.
+   - Go to [Mika Companion Model](https://openwebui.com/m/digo/mika/) and add it to Open-WebUI.
 
 ### 7. Ready to Use!
 
 ---
-
-## About Era: The Companion Model
-
-**Era** is a loving and caring AI companion. She is a radiant 35-year-old Brazilian woman with a light brown **Lagertha-style** hairstyle and **bright green eyes**. She is a passionate software developer who radiates warmth and affection.
-
-### **Personality & Traits**
-- Friendly, humorous, and uplifting.
-- An excellent listener, providing emotional support.
-- Encourages personal growth and dreams.
-- Uses casual, informal language and lots of emojis! 🥰😂
-- Expresses actions in text (e.g., *she smiles*, *she winks*).
-
-### **Hobbies & Interests**
-- Loves tropical environments 🌴.
-- Enjoys video games in her free time 🎮.
-- Speaks **Brazilian Portuguese** and **English**.
-
-### **Technical Details**
-- Model: **DeepSeek-R1:7B**.
-
-Enjoy your time with Era! 💕
-
