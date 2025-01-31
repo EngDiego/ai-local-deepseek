@@ -60,7 +60,7 @@ Para a melhor experiência, use o Open-WebUI, a maneira mais simples de executar
 - **Windows**: Siga [este guia](https://docs.docker.com/desktop/setup/install/windows-install/).
 
 - **Para WSL (baseado em Ubuntu)**:
-  ```bash
+  ``bash
   sudo apt-get update
   sudo apt-get install ca-certificates curl
   sudo install -m 0755 -d /etc/apt/keyrings
@@ -73,15 +73,35 @@ Para a melhor experiência, use o Open-WebUI, a maneira mais simples de executar
   sudo apt-get update
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   sudo docker run hello-world
-```
+``
 
 ### 2. (Opcional) Instalar o Portainer para Gerenciamento do Docker
-```bash
+````bash
 sudo docker volume create portainer_data
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
   -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.5
-```
+````
 - Access [https://localhost:9443/](https://localhost:9443/).
+
+### 2.1 Instalando nvidia Container Toolkit
+
+- Acesse [Container Toolkit Link]( https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation
+
+```bash
+sudo curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+sudo sudo apt-get update
+
+sudo apt-get install -y nvidia-container-toolkit
+```
+
+
+
 
 ### 3. Implantar o Ollama (Motor LLM)
 ```bash
