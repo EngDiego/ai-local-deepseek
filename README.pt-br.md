@@ -84,7 +84,7 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
 ````
 - Access [https://localhost:9443/](https://localhost:9443/).
 
-### 2.1 Instalando nvidia Container Toolkit
+### 2.1 Instalando nvidia Container Toolkit (Opcional em caso de nao funcionar o drive)
 
 - Acesse [Container Toolkit Link](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installation)
 
