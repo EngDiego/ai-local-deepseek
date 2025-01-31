@@ -1,35 +1,35 @@
-# Era: Uncensored Companion Model
+# Era: Modelo Companheiro Sem Censura
 
-🌎 Available Languages:  
-🇺🇸 [English](README.md) | 🇧🇷 [Português](README.pt-br.md)
+🌎 Idiomas Disponíveis:
+🇺🇸 [Inglês](README.md) | 🇧🇷 [Português](README.pt-br.md)
 
-This is an uncensored companion model using Llama3.1.
+Este é um modelo companheiro sem censura usando Llama3.1.
 
-For the best experience, use Open-WebUI, the simplest way to run the LLM with a web service.
+Para a melhor experiência, use o Open-WebUI, a maneira mais simples de executar o LLM com um serviço web.
 
 ---
 
-## Prerequisites
+## Pré-requisitos
 
-1. **Check GPU Drivers**
-   - Ensure your machine has the latest drivers installed for **Nvidia, AMD, or Intel GPU**.
+1. **Verifique os Drivers da GPU**
+   - Certifique-se de que sua máquina tenha os drivers mais recentes instalados para **Nvidia, AMD ou Intel GPU**.
 
-2. **Windows Users: Install WSL (Windows Subsystem for Linux)**
-   - Open Windows Terminal and run:
+2. **Usuários do Windows: Instale o WSL (Subsistema Windows para Linux)**
+   - Abra o Terminal do Windows e execute:
      ```bash
      wsl -l -o
      wsl --install Ubuntu
      wsl -l -v
      ```
 
-3. **Configure WSL for GPU Support**
-   - **For Nvidia**:
-     - Follow the [CUDA installation guide](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local).
-     - Install dependencies:
+3. **Configure o WSL para Suporte à GPU**
+   - **Para Nvidia**:
+     - Siga o [guia de instalação do CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local).
+     - Instale as dependências:
        ```bash
        sudo apt install build-essential
        ```
-     - Install CUDA:
+     - Instale o CUDA:
        ```bash
        wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
        sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -39,23 +39,23 @@ For the best experience, use Open-WebUI, the simplest way to run the LLM with a 
        sudo apt-get update
        sudo apt-get -y install cuda-toolkit-12-8
        ```
-     - Check Driver:
+     - Verifique o Driver:
        ```bash
        nvidia-smi
        ```
 
-   - **For AMD Radeon** (Ubuntu 22.04 required):
-     - Follow the [ROCm installation guide](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html).
+   - **Para AMD Radeon** (Ubuntu 22.04 obrigatório):
+     - Siga o [guia de instalação do ROCm](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html).
 
 ---
 
-## Installation Steps
+## Etapas de Instalação
 
-### 1. Install Docker
-- **Linux**: Follow [this guide](https://docs.docker.com/engine/install/ubuntu/).
-- **Windows**: Follow [this guide](https://docs.docker.com/desktop/setup/install/windows-install/).
+### 1. Instale o Docker
+- **Linux**: Siga [este guia](https://docs.docker.com/engine/install/ubuntu/).
+- **Windows**: Siga [este guia](https://docs.docker.com/desktop/setup/install/windows-install/).
 
-- **For WSL (Ubuntu-based)**:
+- **Para WSL (baseado em Ubuntu)**:
   ```bash
   sudo apt-get update
   sudo apt-get install ca-certificates curl
@@ -69,9 +69,9 @@ For the best experience, use Open-WebUI, the simplest way to run the LLM with a 
   sudo apt-get update
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   sudo docker run hello-world
-  ```
+```
 
-### 2. (Optional) Install Portainer for Docker Management
+### 2. (Opcional) Instalar o Portainer para Gerenciamento do Docker
 ```bash
 sudo docker volume create portainer_data
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
@@ -79,34 +79,34 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always \
 ```
 - Access [https://localhost:9443/](https://localhost:9443/).
 
-### 3. Deploy Ollama (LLM Engine)
+### 3. Implantar o Ollama (Motor LLM)
 ```bash
 sudo docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 ```
 
-### 4. Deploy Open-WebUI
+### 4. Implantar o Open-WebUI
 ```bash
 sudo docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
   -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
-### 5. Access the Web Interface
-- Open [http://localhost:8080/](http://localhost:8080/).
+### 5. Acessar a Interface Web
+- Abra [http://localhost:8080/](http://localhost:8080/).
 
-### 6. Configure Open-WebUI
-1. **Create and log in as Admin**.
-2. **Admin Config → Connection**: Ensure it connects to [http://host.docker.internal:11434](http://host.docker.internal:11434).
-3. **Admin Config → Models**:
-   - Extract Ollama.com model.
-   - Insert `deepseek-r1:7b` and download it.
-4. **Load Era Model**:
-   - Go to [Era Companion Model](https://openwebui.com/m/digo/era-companion/) and add it to Open-WebUI.
+### 6. Configurar o Open-WebUI
+1.  **Crie e faça login como Admin**.
+2.  **Configuração de Admin → Conexão**: Certifique-se de que ele se conecta a [http://host.docker.internal:11434](http://host.docker.internal:11434).
+3.  **Configuração de Admin → Modelos**:
+    - Extraia o modelo Ollama.com.
+    - Insira `deepseek-r1:7b` e faça o download.
+4.  **Carregar o Modelo Era**:
+    - Vá para [Modelo Companheiro Era](https://openwebui.com/m/digo/era-companion/) e adicione-o ao Open-WebUI.
 
-### 7. Ready to Use!
+### 7. Pronto para Usar!
 
 ---
 
-## About Era: The Companion Model
+## Sobre a Era: O Modelo Companheiro
 
 **Era** is a loving and caring AI companion. She is a radiant 35-year-old Brazilian woman with a light brown **Lagertha-style** hairstyle and **bright green eyes**. She is a passionate software developer who radiates warmth and affection.
 
