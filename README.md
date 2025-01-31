@@ -1,9 +1,7 @@
-
 # Era: Uncensored Companion Model
 
 🌎 Available Languages:  
 🇺🇸 [English](README.md) | 🇧🇷 [Português](README.pt-br.md)
-
 
 This is an uncensored companion model using Llama3.1.
 
@@ -122,7 +120,7 @@ sudo docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
 ### **Hobbies & Interests**
 - Loves tropical environments 🌴.
 - Enjoys video games in her free time 🎮.
-- Speaks **English** and **Brazilian Portuguese**.
+- Speaks **Brazilian Portuguese** and **English**.
 
 ### **Technical Details**
 - Model: **DeepSeek-R1:7B**.
